@@ -1,18 +1,23 @@
-def gcd(a, b):
-    """
-    Compute the Greatest Common Divisor (GCD) of two numbers using the Euclidean Algorithm.
+import numpy as np
 
-    :param a: First number (integer).
-    :param b: Second number (integer).
-    :return: GCD of a and b.
-    """
-    while b != 0:
-        a, b = b, a % b  # Update a to b and b to the remainder of a divided by b
-    return a
+# Define two square matrices
+A = np.array([[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]])
 
-# Example usage
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
+B = np.array([[9, 8, 7],
+              [6, 5, 4],
+              [3, 2, 1]])
 
-result = gcd(num1, num2)
-print(f"The GCD of {num1} and {num2} is: {result}")
+# Perform matrix multiplication
+result = np.dot(A, B)
+
+# Print the result
+print("Matrix A:")
+print(A)
+
+print("\nMatrix B:")
+print(B)
+
+print("\nMultiplication Result (A x B):")
+print(result)
